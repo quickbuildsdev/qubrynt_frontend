@@ -154,7 +154,7 @@ export default function Notebook() {
                           {pages.map((n) => (
                             <button key={n.id} className={`nb-page ${n.id === page ? 'on' : ''}`} onClick={() => { setBook(b.id); setPage(n.id); setShowEditor(true) }}>
                               <FileText size={16} />
-                              <span className="nb-page-txt"><b>{n.title || 'Untitled page'}</b><span>{when(n.updated)} · {n.body.trim().split('\n')[0] || 'Empty page'}</span></span>
+                              <span className="nb-page-txt"><b>{n.title || 'Untitled page'}</b><span>{when(n.updated)}</span></span>
                               {n.pinned && <Pin size={12} className="nb-pin" />}
                             </button>
                           ))}
