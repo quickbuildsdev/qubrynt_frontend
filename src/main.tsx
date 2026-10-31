@@ -5,6 +5,7 @@ import { MotionConfig } from 'framer-motion'
 import { AuthProvider } from './auth'
 import App from './App'
 import './styles.css'
+import { Analytics } from '@vercel/analytics/react'
 
 try { document.documentElement.dataset.theme = localStorage.getItem('qubrynt.theme') || 'light' } catch {}
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <AuthProvider>
         <App />
+        <Analytics />
       </AuthProvider>
     </BrowserRouter>
   </MotionConfig>
